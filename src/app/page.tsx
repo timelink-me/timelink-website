@@ -16,19 +16,25 @@ export default function Home() {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-teal-50 dark:from-slate-900 dark:to-slate-800">
+    <div id="top" className="min-h-screen bg-gradient-to-br from-slate-50 to-teal-50 dark:from-slate-900 dark:to-slate-800">
       {/* Navigation */}
       <nav className="fixed w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <a href="/" className="flex items-center space-x-2">
+            <button
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.history.pushState({}, '', '/');
+              }}
+              className="flex items-center space-x-2 cursor-pointer"
+            >
               <div className="w-8 h-8 bg-gradient-to-br from-[#008C8C] to-[#006666] rounded-lg flex items-center justify-center">
                 <Clock className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold text-slate-900 dark:text-white">
                 TimeLink
               </span>
-            </a>
+            </button>
             <div className="flex items-center space-x-8">
               <a
                 href="#features"
