@@ -3,14 +3,15 @@ export const translations = {
     nav: {
       features: "Features",
       useCases: "Use Cases",
-      getStarted: "Get Started"
+      getStarted: "Get Started",
     },
     hero: {
       title: "Make Time",
       titleHighlight: "Visual",
-      subtitle: "TimeLink is a powerful timeline creation tool that lets you easily create beautiful timelines for travel plans, historical events, project progress, and any time-sequenced content",
+      subtitle:
+        "TimeLink is a powerful timeline creation tool that lets you easily create beautiful timelines for travel plans, historical events, project progress, and any time-sequenced content",
       startNow: "Start Now",
-      watchDemo: "Watch Demo"
+      watchDemo: "Watch Demo",
     },
     timeline: {
       projectStart: "Project Start",
@@ -20,27 +21,32 @@ export const translations = {
       designPhase: "Design Phase",
       designDate: "March 2024",
       development: "Development",
-      developmentDate: "April 2024"
+      developmentDate: "April 2024",
     },
     features: {
       title: "Powerful Features",
-      subtitle: "Simple interface, powerful functionality to make your timeline creation more efficient",
+      subtitle:
+        "Simple interface, powerful functionality to make your timeline creation more efficient",
       dragEdit: "Drag & Edit",
-      dragEditDesc: "Intuitive drag interface for easy adding, editing and rearranging timeline items",
+      dragEditDesc:
+        "Intuitive drag interface for easy adding, editing and rearranging timeline items",
       templates: "Beautiful Templates",
       templatesDesc: "Rich preset templates and themes for different scenarios",
       collaboration: "Team Collaboration",
-      collaborationDesc: "Multi-user collaborative editing with real-time sync updates",
+      collaborationDesc:
+        "Multi-user collaborative editing with real-time sync updates",
       mapIntegration: "Map Integration",
       mapIntegrationDesc: "Add geographic location markers to travel timelines",
       flexibleTime: "Flexible Time",
-      flexibleTimeDesc: "Support multiple time formats, accurate to minutes or spanning millennia",
+      flexibleTimeDesc:
+        "Support multiple time formats, accurate to minutes or spanning millennia",
       exportShare: "Export & Share",
-      exportShareDesc: "One-click export to images, PDF or share links"
+      exportShareDesc: "One-click export to images, PDF or share links",
     },
     useCases: {
       title: "Unlimited Use Cases",
-      subtitle: "From personal records to enterprise projects, TimeLink fits any timeline scenario",
+      subtitle:
+        "From personal records to enterprise projects, TimeLink fits any timeline scenario",
       travelPlan: "Travel Planning",
       travelPlanDesc: "Record itineraries and beautiful memories",
       historicalEvents: "Historical Events",
@@ -48,16 +54,18 @@ export const translations = {
       projectManagement: "Project Management",
       projectManagementDesc: "Track project milestones",
       personalGrowth: "Personal Growth",
-      personalGrowthDesc: "Record important life moments"
+      personalGrowthDesc: "Record important life moments",
     },
     cta: {
       title: "Start Creating Your Timeline",
-      subtitle: "Experience TimeLink now and present your stories in the most beautiful way",
+      subtitle:
+        "Experience TimeLink now and present your stories in the most beautiful way",
       freeStart: "Start Free",
-      contactUs: "Contact Us"
+      contactUs: "Contact Us",
     },
     footer: {
-      description: "Make time visual, record your stories and journeys in the most beautiful way.",
+      description:
+        "Make time visual, record your stories and journeys in the most beautiful way.",
       product: "Product",
       features: "Features",
       templates: "Templates",
@@ -66,21 +74,22 @@ export const translations = {
       helpCenter: "Help Center",
       support: "Contact Support",
       feedback: "Feedback",
-      copyright: "© 2024 TimeLink. All rights reserved."
-    }
+      copyright: "© 2025 TimeLink. All rights reserved.",
+    },
   },
   zh: {
     nav: {
       features: "功能特性",
       useCases: "使用场景",
-      getStarted: "开始使用"
+      getStarted: "开始使用",
     },
     hero: {
       title: "让时间变得",
       titleHighlight: "可视化",
-      subtitle: "TimeLink 是一款强大的时间线创建工具，让您轻松制作美观的时间轴，记录旅行计划、历史发展、项目进度等任何时序内容",
+      subtitle:
+        "TimeLink 是一款强大的时间线创建工具，让您轻松制作美观的时间轴，记录旅行计划、历史发展、项目进度等任何时序内容",
       startNow: "立即开始",
-      watchDemo: "观看演示"
+      watchDemo: "观看演示",
     },
     timeline: {
       projectStart: "项目启动",
@@ -90,7 +99,7 @@ export const translations = {
       designPhase: "设计阶段",
       designDate: "2024年3月",
       development: "开发实现",
-      developmentDate: "2024年4月"
+      developmentDate: "2024年4月",
     },
     features: {
       title: "强大功能特性",
@@ -106,7 +115,7 @@ export const translations = {
       flexibleTime: "灵活时间",
       flexibleTimeDesc: "支持多种时间格式，精确到分钟或跨越千年",
       exportShare: "导出分享",
-      exportShareDesc: "一键导出为图片、PDF或分享链接"
+      exportShareDesc: "一键导出为图片、PDF或分享链接",
     },
     useCases: {
       title: "无限使用场景",
@@ -118,13 +127,13 @@ export const translations = {
       projectManagement: "项目管理",
       projectManagementDesc: "跟踪项目里程碑",
       personalGrowth: "个人成长",
-      personalGrowthDesc: "记录人生重要时刻"
+      personalGrowthDesc: "记录人生重要时刻",
     },
     cta: {
       title: "开始创建您的时间线",
       subtitle: "立即体验 TimeLink，让您的故事以最美的方式呈现",
       freeStart: "免费开始",
-      contactUs: "联系我们"
+      contactUs: "联系我们",
     },
     footer: {
       description: "让时间变得可视化，用最美的方式记录您的故事和历程。",
@@ -136,9 +145,9 @@ export const translations = {
       helpCenter: "帮助中心",
       support: "联系支持",
       feedback: "反馈建议",
-      copyright: "© 2024 TimeLink. 保留所有权利。"
-    }
-  }
+      copyright: "© 2025 TimeLink. 保留所有权利。",
+    },
+  },
 } as const;
 
 export type Language = keyof typeof translations;
