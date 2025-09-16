@@ -341,7 +341,9 @@ export default function Home() {
           </div>
           <div className="border-t border-slate-800 mt-8 pt-8 flex items-center justify-between text-slate-400">
             <p className="text-sm sm:text-sm">{t.footer.copyright}</p>
-            <LanguageToggle />
+            <div className="flex items-center space-x-2">
+              <LanguageToggle />
+            </div>
           </div>
         </div>
       </footer>
