@@ -11,6 +11,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm start` - Start production server
 - `npm run lint` - Run ESLint
 
+**Important Note:** Always run `npm run lint` after making code changes to ensure code quality and consistency.
+
 ## Project Architecture
 
 This is a Next.js 15 project using the App Router pattern, configured for static export with SSG. The application is a marketing website for TimeLink, a timeline creation tool.
@@ -19,18 +21,21 @@ This is a Next.js 15 project using the App Router pattern, configured for static
 
 **Static Export Configuration:**
 - Configured in `next.config.ts` with `output: 'export'` and `trailingSlash: true`
-- Images are unoptimized for static hosting compatibility
-- Build outputs to `/out` directory
+- Images are unoptimized for static hosting compatibility (`unoptimized: true`)
+- Build outputs to `/out` directory for static hosting
 
 **Multi-language Support:**
 - `LanguageContext` provides translation functionality via React Context
-- Translations stored in `src/lib/translations.ts` supporting English and Chinese
+- Translations stored in `src/lib/translations.ts` supporting English (`en`) and Chinese (`zh`)
 - Uses `useLanguage()` hook to access current language and translations
+- Translation keys are strongly typed using TypeScript
 
 **Theme System:**
 - `ThemeContext` implements light/dark mode toggle with localStorage persistence
+- Supports 'light', 'dark', and 'system' theme options
 - Automatically detects system theme preference on first visit
-- Uses Tailwind CSS dark mode classes
+- Uses Tailwind CSS dark mode classes with `resolvedTheme` for actual applied theme
+- Listens for system theme changes when in 'system' mode
 
 **Component Structure:**
 - Page components in `src/app/` (App Router)
@@ -40,11 +45,12 @@ This is a Next.js 15 project using the App Router pattern, configured for static
 
 ### Technology Stack
 
-- **Framework:** Next.js 15 with App Router
-- **Styling:** Tailwind CSS v4 with PostCSS
+- **Framework:** Next.js 15 with App Router and Turbopack
+- **Styling:** Tailwind CSS v4 with PostCSS plugin
 - **Icons:** Lucide React
 - **Fonts:** Geist Sans and Geist Mono (Google Fonts)
 - **TypeScript:** Strict mode enabled with path aliases (`@/*` → `./src/*`)
+- **Linting:** ESLint with Next.js and TypeScript configurations
 
 ### Context Providers
 
