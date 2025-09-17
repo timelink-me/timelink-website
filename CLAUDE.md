@@ -2,9 +2,14 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+Always use context7 when I need code generation, setup or configuration steps, or
+library/API documentation. This means you should automatically use the Context7 MCP
+tools to resolve library id and get library docs without me having to explicitly ask.
+
 ## Development Commands
 
 **Development:**
+
 - `npm run dev` - Start development server with Turbopack
 - `npm run build` - Build for production with Turbopack
 - `npm run export` - Build and export static files
@@ -20,17 +25,20 @@ This is a Next.js 15 project using the App Router pattern, configured for static
 ### Key Architecture Patterns
 
 **Static Export Configuration:**
+
 - Configured in `next.config.ts` with `output: 'export'` and `trailingSlash: true`
 - Images are unoptimized for static hosting compatibility (`unoptimized: true`)
 - Build outputs to `/out` directory for static hosting
 
 **Multi-language Support:**
+
 - `LanguageContext` provides translation functionality via React Context
 - Translations stored in `src/lib/translations.ts` supporting English (`en`) and Chinese (`zh`)
 - Uses `useLanguage()` hook to access current language and translations
 - Translation keys are strongly typed using TypeScript
 
 **Theme System:**
+
 - `ThemeContext` implements light/dark mode toggle with localStorage persistence
 - Supports 'light', 'dark', and 'system' theme options
 - Automatically detects system theme preference on first visit
@@ -38,6 +46,7 @@ This is a Next.js 15 project using the App Router pattern, configured for static
 - Listens for system theme changes when in 'system' mode
 
 **Component Structure:**
+
 - Page components in `src/app/` (App Router)
 - Reusable components in `src/components/`
 - Context providers in `src/contexts/`
@@ -55,6 +64,7 @@ This is a Next.js 15 project using the App Router pattern, configured for static
 ### Context Providers
 
 The app is wrapped with nested providers in `layout.tsx`:
+
 1. `ThemeProvider` - Manages light/dark theme state
 2. `LanguageProvider` - Manages translation state and current language
 
